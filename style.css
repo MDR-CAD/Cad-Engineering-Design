@@ -134,8 +134,8 @@
 }
 .fade{
   opacity: 0;
-  animation:fadeIn 0.9s;
-  -webkit-animation:fadeIn 0.9s;
+  animation:fadeIn 0.9s forwards;
+  -webkit-animation:fadeIn 0.9s forwards;
 }
 
 .sidenav{

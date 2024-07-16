@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // scrol
   const scrol=document.querySelectorAll('.scrollspy');
-      M.ScrollSpy.init(scrol,{
-        transition:6000,
-        scrollOffset:50
-      });
+  M.ScrollSpy.init(scrol,{
+    transition:6000,
+    scrollOffset:50
+  });
   });
 
 
@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target.classList.contains('gambar-portofolio')) {
       // Open the modal and set the image
       modal.style.display = "flex"; // Use flex to center the modal
-      modalImage.src = e.target.src;"15px"
-      modalImage.style.borderRadius = 
+      modalImage.src = e.target.src;
       modalImage.classList.add('fade');
       setTimeout(function(){
         modalImage.classList.remove('fade');
