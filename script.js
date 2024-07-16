@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Open the modal and set the image
       modal.style.display = "flex"; // Use flex to center the modal
       modalImage.src = e.target.src;
+      modalImage.classList.add('fade');
+      setTimeout(function(){
+        modalImage.classList.remove('fade');
+      },300)
     }
   });
 
