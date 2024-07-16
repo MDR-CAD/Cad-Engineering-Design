@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target.classList.contains('gambar-portofolio')) {
       // Open the modal and set the image
       modal.style.display = "flex"; // Use flex to center the modal
-      modalImage.src = e.target.src;
+      modalImage.src = e.target.src;"15px"
+      modalImage.style.borderRadius = 
       modalImage.classList.add('fade');
       setTimeout(function(){
         modalImage.classList.remove('fade');
