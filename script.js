@@ -18,3 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollOffset:50
       });
   });
+
+
+  const portofolio = document.querySelector('.portofolio');
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const captionText = document.getElementById("caption");
+  const closeModal = document.querySelector(".close");
+
+  portofolio.addEventListener('click', function(e) {
+    if (e.target.classList.contains('gambar-portofolio')) {
+      // Open the modal and set the image
+      modal.style.display = "flex"; // Use flex to center the modal
+      modalImage.src = e.target.src;
+      captionText.innerHTML = e.target.nextElementSibling.innerHTML; // Get title
+    }
+  });
+
+  // Close the modal when the close button is clicked
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close the modal when clicking anywhere outside of the image
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
