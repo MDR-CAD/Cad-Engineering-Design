@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const portofolio = document.querySelector('.portofolio');
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
-  const captionText = document.getElementById("caption");
   const closeModal = document.querySelector(".close");
 
   portofolio.addEventListener('click', function(e) {
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // Open the modal and set the image
       modal.style.display = "flex"; // Use flex to center the modal
       modalImage.src = e.target.src;
-      captionText.innerHTML = e.target.nextElementSibling.innerHTML; // Get title
     }
   });
 
