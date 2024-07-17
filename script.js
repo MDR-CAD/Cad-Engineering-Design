@@ -48,3 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
       modal.style.display = "none";
     }
   };
+
+  const animasi=document.querySelector('.animasi')
+  
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.animasi',{
+          duration:4,
+          delay:1.5,
+          text:'',
+          repeat:1,
+          yoyo:true
+        });
