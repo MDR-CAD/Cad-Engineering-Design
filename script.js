@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sidenav = document.querySelectorAll('.sidenav');
-  M.Sidenav.init(sidenav);
+  const sidenavInstances= M.Sidenav.init(sidenav);
+  const close = document.querySelector('.close');
+  close.addEventListener('click', function() {
+    sidenavInstances.forEach(instance => instance.close());
+  });
 
   // slider bawah
   const sliderBawah = document.querySelectorAll('.slider');
